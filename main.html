@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Valerie! 🎉</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0.3; }
+        }
+        @keyframes rise {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(-360deg); opacity: 0; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            25% { transform: translateY(-30px) scale(1.1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+            75% { transform: translateY(-25px) scale(1.08); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.8), 0 0 60px rgba(236, 72, 153, 0.6); }
+        }
+        .confetti { animation: fall linear infinite; }
+        .balloon { animation: rise linear infinite; }
+        .bounce { animation: bounce 2s ease-in-out infinite; }
+        .pulse { animation: pulse 2s ease-in-out infinite; }
+        .wiggle { animation: wiggle 1s ease-in-out infinite; }
+        .fade-in { animation: fadeIn 1.2s ease-out forwards; }
+        .slide-left { animation: slideInLeft 1s ease-out forwards; }
+        .slide-right { animation: slideInRight 1s ease-out forwards; }
+        .sparkle { animation: sparkle 2s ease-in-out infinite; }
+        .float { animation: float 3s ease-in-out infinite; }
+        .rainbow { animation: rainbow 3s linear infinite; }
+        .glow { animation: glow 2s ease-in-out infinite; }
+        .hover-grow:hover { transform: scale(1.05); transition: all 0.3s ease; }
+    </style>
+</head>
+<!-- AQUÍ SOLO CAMBIÉ overflow-hidden POR overflow-x-hidden -->
+<body class="min-h-screen bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600 overflow-x-hidden">
+    <!-- Sparkles Background -->
+    <div class="fixed inset-0 pointer-events-none z-40">
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 10%; top: 20%; animation-delay: 0s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 85%; top: 15%; animation-delay: 0.5s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 25%; top: 60%; animation-delay: 1s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 70%; top: 70%; animation-delay: 1.5s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 50%; top: 30%; animation-delay: 2s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 15%; top: 80%; animation-delay: 2.5s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 90%; top: 50%; animation-delay: 1.2s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 40%; top: 10%; animation-delay: 1.8s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 60%; top: 40%; animation-delay: 0.8s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-2xl" style="left: 30%; top: 90%; animation-delay: 2.2s;">✨</div>
+        <div class="sparkle absolute text-yellow-300 text-3xl" style="left: 5%; top: 45%; animation-delay: 0.3s;">⭐</div>
+        <div class="sparkle absolute text-yellow-300 text-3xl" style="left: 95%; top: 25%; animation-delay: 1.3s;">⭐</div>
+        <div class="sparkle absolute text-yellow-300 text-3xl" style="left: 45%; top: 75%; animation-delay: 2.8s;">⭐</div>
+        <div class="sparkle absolute text-yellow-300 text-3xl" style="left: 75%; top: 85%; animation-delay: 0.7s;">⭐</div>
+        <div class="sparkle absolute text-yellow-300 text-3xl" style="left: 20%; top: 35%; animation-delay: 1.9s;">⭐</div>
+    </div>
+
+    <!-- Confetti -->
+    <div class="fixed inset-0 pointer-events-none z-50">
+        <div class="confetti absolute text-4xl" style="left: 5%; animation-delay: 0s; animation-duration: 5s;">🎉</div>
+        <div class="confetti absolute text-4xl" style="left: 15%; animation-delay: 0.5s; animation-duration: 6s;">🎊</div>
+        <div class="confetti absolute text-4xl" style="left: 25%; animation-delay: 1s; animation-duration: 5.5s;">🎈</div>
+        <div class="confetti absolute text-4xl" style="left: 35%; animation-delay: 1.5s; animation-duration: 6.5s;">⭐</div>
+        <div class="confetti absolute text-4xl" style="left: 45%; animation-delay: 2s; animation-duration: 5s;">💫</div>
+        <div class="confetti absolute text-4xl" style="left: 55%; animation-delay: 2.5s; animation-duration: 6s;">🌟</div>
+        <div class="confetti absolute text-4xl" style="left: 65%; animation-delay: 3s; animation-duration: 5.5s;">✨</div>
+        <div class="confetti absolute text-4xl" style="left: 75%; animation-delay: 3.5s; animation-duration: 6.5s;">💝</div>
+        <div class="confetti absolute text-4xl" style="left: 85%; animation-delay: 4s; animation-duration: 5s;">🎁</div>
+        <div class="confetti absolute text-4xl" style="left: 95%; animation-delay: 4.5s; animation-duration: 6s;">🎂</div>
+        <div class="confetti absolute text-4xl" style="left: 10%; animation-delay: 0.8s; animation-duration: 5.8s;">🎉</div>
+        <div class="confetti absolute text-4xl" style="left: 20%; animation-delay: 1.3s; animation-duration: 6.2s;">🎊</div>
+        <div class="confetti absolute text-4xl" style="left: 30%; animation-delay: 1.8s; animation-duration: 5.3s;">🎈</div>
+        <div class="confetti absolute text-4xl" style="left: 40%; animation-delay: 2.3s; animation-duration: 6.8s;">⭐</div>
+        <div class="confetti absolute text-4xl" style="left: 50%; animation-delay: 2.8s; animation-duration: 5.6s;">💫</div>
+        <div class="confetti absolute text-4xl" style="left: 60%; animation-delay: 3.3s; animation-duration: 6.3s;">🌟</div>
+        <div class="confetti absolute text-4xl" style="left: 70%; animation-delay: 3.8s; animation-duration: 5.9s;">✨</div>
+        <div class="confetti absolute text-4xl" style="left: 80%; animation-delay: 4.3s; animation-duration: 6.7s;">💝</div>
+        <div class="confetti absolute text-4xl" style="left: 90%; animation-delay: 0.3s; animation-duration: 5.4s;">🎁</div>
+        <div class="confetti absolute text-4xl" style="left: 8%; animation-delay: 1.1s; animation-duration: 6.4s;">🎂</div>
+    </div>
+
+    <!-- Balloons -->
+    <div class="fixed inset-0 pointer-events-none z-30">
+        <div class="balloon absolute text-6xl" style="left: 8%; animation-delay: 0s; animation-duration: 8s; color: #ff6b9d;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 22%; animation-delay: 1s; animation-duration: 9s; color: #c44569;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 38%; animation-delay: 2s; animation-duration: 10s; color: #a55eea;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 52%; animation-delay: 0.5s; animation-duration: 8.5s; color: #4b7bec;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 68%; animation-delay: 1.5s; animation-duration: 9.5s; color: #26de81;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 82%; animation-delay: 2.5s; animation-duration: 10.5s; color: #ff6b9d;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 15%; animation-delay: 1.2s; animation-duration: 8.8s; color: #a55eea;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 45%; animation-delay: 2.2s; animation-duration: 9.2s; color: #4b7bec;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 75%; animation-delay: 0.8s; animation-duration: 8.3s; color: #c44569;">🎈</div>
+        <div class="balloon absolute text-6xl" style="left: 92%; animation-delay: 1.8s; animation-duration: 9.8s; color: #26de81;">🎈</div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="min-h-screen flex items-center justify-center p-4 relative z-10">
+        <div class="fade-in bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 max-w-3xl w-full hover-grow border-4 border-purple-300 glow">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <div class="flex justify-center items-center space-x-3 mb-4">
+                    <span class="text-6xl bounce">🎂</span>
+                    <span class="text-6xl bounce rainbow" style="animation-delay: 0.2s;">🎉</span>
+                    <span class="text-6xl bounce" style="animation-delay: 0.4s;">🎊</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-black bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4 pulse">
+                    ¡FELIZ CUMPLEAÑOS!
+                </h1>
+                <div class="relative inline-block">
+                    <h2 class="text-5xl md:text-6xl font-black text-purple-600 wiggle relative z-10">
+                        Valerie ✨
+                    </h2>
+                    <div class="absolute inset-0 blur-xl bg-gradient-to-r from-pink-400 to-purple-400 opacity-50 pulse"></div>
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="space-y-6 text-gray-800 text-xl leading-relaxed">
+                <div class="slide-left bg-gradient-to-r from-pink-100 to-purple-100 p-6 rounded-2xl shadow-lg hover-grow" style="animation-delay: 0.2s;">
+                    <p class="font-medium">
+                        🌟 <span class="font-bold text-purple-700">¡Hoy es TU día especial!</span> Que sea un día lleno de alegría, sorpresas lindas y momentos increíbles. 
+                    </p>
+                </div>
+
+                <div class="slide-right bg-gradient-to-r from-yellow-100 to-pink-100 p-6 rounded-2xl shadow-lg hover-grow" style="animation-delay: 0.4s;">
+                    <p class="font-medium">
+                        💜 Gracias por siempre traer esa <span class="font-bold text-pink-600">energía positiva</span> y buena vibra (¡y sí, también por tus consultas de soporte que alegran el día! 😄).
+                    </p>
+                </div>
+
+                <div class="slide-left bg-gradient-to-r from-purple-100 to-indigo-100 p-6 rounded-2xl shadow-lg hover-grow" style="animation-delay: 0.6s;">
+                    <p class="font-medium">
+                        ✨ Que este nuevo año de vida te traiga <span class="font-bold text-indigo-600">todo lo que sueñas y más</span>, Lic. Que sigas brillando con esa luz tan especial que te caracteriza.
+                    </p>
+                </div>
+
+                <div class="fade-in text-center bg-gradient-to-r from-pink-200 to-purple-200 p-8 rounded-2xl shadow-xl mt-8 hover-grow" style="animation-delay: 0.8s;">
+                    <p class="text-3xl font-black text-purple-700 pulse">
+                        🎈 ¡A CELEBRAR A LO GRANDE! 🎊
+                    </p>
+                    <p class="text-xl font-bold text-pink-600 mt-2">
+                        ¡Disfruta cada momento de este día maravilloso! 💖
+                    </p>
+                </div>
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="mt-10 flex justify-center space-x-6 text-5xl">
+                <span class="bounce float" style="animation-delay: 0s;">🎁</span>
+                <span class="bounce float" style="animation-delay: 0.3s;">💝</span>
+                <span class="bounce float rainbow" style="animation-delay: 0.6s;">🎉</span>
+                <span class="bounce float" style="animation-delay: 0.9s;">🎊</span>
+                <span class="bounce float" style="animation-delay: 1.2s;">🌟</span>
+            </div>
+
+            <!-- Footer message -->
+            <div class="mt-8 text-center text-sm text-gray-500">
+                <p class="fade-in" style="animation-delay: 1s;">💌 Creado especialmente para Valerie 💌</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add extra interactivity on load
+        window.addEventListener('load', function() {
+            const card = document.querySelector('.fade-in');
+            setTimeout(() => {
+                card.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    card.style.transform = 'scale(1)';
+                }, 300);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
